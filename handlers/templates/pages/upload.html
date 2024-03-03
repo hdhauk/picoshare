@@ -283,6 +283,22 @@
       </label>
     </div>
 
+    {{ if .GuestLinkMetadata.ID }}
+    <div class="field my-5">
+      <label class="label">Note <i>(optional)</i></label>
+      <div class="control">
+        <input
+          id="note"
+          class="input is-normal"
+          type="text"
+          placeholder="Ole's photos"
+          maxlength="150"
+        />
+      </div>
+      <p class="help">Note is only visible to you</p>
+    </div>
+  {{ end }}
+
     <!-- <textarea id="pastebox" class="mt-5"></textarea> -->
 
     {{ if gt (len .ExpirationOptions) 0 }}
